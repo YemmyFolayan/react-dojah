@@ -8,7 +8,7 @@ const App = () => {
    * https://dojah.io/dashboard
    * to create an app and retrieve it)
    */
-  const appID = "	6194f5f3c423930034a33f16";
+  const appID = "6194f5f3c423930034a33f16";
 
   /**
    *  This is your account public key
@@ -39,25 +39,29 @@ const App = () => {
    const config = {
     debug: true,
     //webhook: true, //Before you set webhook to true, Ensure you are subscribed to the webhook here https://api-docs.dojah.io/docs/subscribe-to-services
-    pages: [
-      {
-        page: 'government-data',
-        config: {
-          bvn: true,
-          nin: false,
-          dl: false,
-          mobile: false,
-          otp: false,
-          selfie: false,
-        },
-      },
-      // { page: 'user-data', config: { enabled: false } },
-      // { page: 'countries', config: { enabled: false } }, 
-      // { page: 'business-data', config: {cac: true, tin: true, verification: true} },
-      // { page: 'business-id' },
-      {page: 'selfie'},
-      {page: 'id', config: {passport: false, dl: true}},
-    ],
+    // pages: [
+    //   {
+    //     page: 'government-data',
+    //     config: {
+    //       bvn: true,
+    //       nin: false,
+    //       dl: false,
+    //       mobile: false,
+    //       otp: false,
+    //       selfie: false,
+    //     },
+    //   },
+    //   // { page: 'user-data', config: { enabled: false } },
+    //   // { page: 'countries', config: { enabled: false } }, 
+    //   // { page: 'business-data', config: {cac: true, tin: true, verification: true} },
+    //   // { page: 'business-id' },
+    //   {page: 'selfie'},
+    //   {page: 'id', config: {passport: false, dl: true}},
+    // ],
+
+
+    widget_id: "64fefb41419cbc00400249ce",
+
   };
 
   /**
@@ -68,19 +72,7 @@ const App = () => {
    *  NOTE: Passing all the values will automatically skip
    *  the user-data page (thus the commented out `last_name`)
    */
-  const userData = {
-    first_name: 'michael',
-    last_name: 'folayan', // 'Nna'
-    dob: '1998-05-16',
-  };
 
-  /**
-   *  These are the metadata options
-   *  You can pass any values within the object
-   */
-  const metadata = {
-    user_id: '121',
-  };
 
   /**
    * @param {String} type
@@ -109,8 +101,7 @@ const App = () => {
       publicKey={publicKey}
       type={type}
       config={config}
-      userData={userData}
-      metadata={metadata}
+     
     />
   );
 }
