@@ -43,7 +43,6 @@ class Dojah extends Component {
     this.script.removeEventListener('error', this.error)
     //document.head.removeChild(this.script)
   }
-
   open = () => {
     const { appID, publicKey, type, response, config, metadata, userData } =
       this.props
